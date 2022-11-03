@@ -7,13 +7,17 @@ body {
 }
 main {
   height: 100vh;
-  display: grid;
+  display: flex;
   align-items: center;
   place-content: center;
 }
-h1 {
-  font-size: 2rem;
+span {
+  transform-style: preserve-3d;
+  font-size: 4rem;
   font-weight: 700;
+  position: absolute;
+  transform: translate(-50%, -50%) rotateX(calc(var(--i) * 36deg))
+    translateZ(25px);
 }
 .no {
   color: #ff8c00;
@@ -23,10 +27,4 @@ h1 {
 }
 .emphasis {
   color: red;
-}
-h1::after {
-  content: "";
-  background-color: pink;
-  height: 2rem;
-  width: 20px;
 }
